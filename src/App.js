@@ -9,7 +9,7 @@ function App() {
   return (
     <>
         <NavBar/>
-        <Hero greeting="Bienvenidx a mi página web!" className=''/>
+        <Hero/>
         <ItemListContainer/>
     </>
   );
