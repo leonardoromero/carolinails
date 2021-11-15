@@ -7,10 +7,6 @@ export const Item = ( { name, desc, price, img, stock, initial } ) => {
     const add = () => {setCount(count+1)}
     const substract = () => {setCount(count-1)}
 
-    let styles = {
-        backgroundImage: `url(${img})`
-    }
-
     return (
         <>
             <div className="card text-center shadow-2xl md:max-w-xs m-8 bg-base-200">
@@ -26,9 +22,9 @@ export const Item = ( { name, desc, price, img, stock, initial } ) => {
                     </div> 
                 </div>
                 <div>
-                    {stock == 0 ?
+                    {stock === 0 ?
                         <p className={stock === 0 ? "text-center text-gray-400" : "hidden"}>Stock insuficiente</p> :
-                        <button className='btn btn-primary btn-sm'>Agregar al carrito</button>
+                        <button className='btn btn-sm'>Agregar al carrito</button>
                     }
                 </div>
             </div>

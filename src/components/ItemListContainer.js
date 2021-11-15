@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { ItemList } from './ItemList'
 import { getData } from '../helpers/getData.js'
 import { Loading } from './Loading'
+import footer from '../img/footer.svg'
 
 export const ItemListContainer = () => {
 
@@ -25,7 +26,7 @@ export const ItemListContainer = () => {
     
 
     return (
-        <div className="flex justify-center">
+        <div className="flex justify-center bg-primaryFocus">
             {loading ? <Loading/> : <ItemList services={services}/>}
         </div>
     )
