@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../img/logo.png'
 import { CartWidget } from './CartWidget'
 
@@ -11,23 +12,29 @@ export const NavBar = () => {
               <path strokeLinecap="round" strokeLineJoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>               
             </svg>
           </button>
-            <img src={Logo} alt="logo" className='h-20'/>
+            <Link to="/"><img src={Logo} alt="logo" className='h-20'/></Link>
           </div> 
           <div className="px-2 mx-2 navbar-end lg:flex">
             <div className="flex items-stretch">
               <a className="hidden lg:flex btn text-detail4 bg-primaryBg border-primaryBg hover:text-primary hover:bg-primaryBg hover:border-transparent mx-5 text-base" href="/#">
-                      Home
-                    </a> 
+                <Link to="/">Inicio</Link>
+              </a> 
               <a className="hidden lg:flex btn text-detail4 bg-primaryBg border-primaryBg hover:text-primary hover:bg-primaryBg hover:border-transparent mx-5 text-base" href="/#">
-                      Galería
-                    </a> 
+                <Link to="services">Servicios</Link>
+              </a> 
               <a className="hidden lg:flex btn text-detail4 bg-primaryBg border-primaryBg hover:text-primary hover:bg-primaryBg hover:border-transparent mx-5 text-base" href="/#">
-                      Contacto
-                    </a> 
+                <Link to="services/esmaltado">Esmaltadas</Link>
+              </a> 
+              <a className="hidden lg:flex btn text-detail4 bg-primaryBg border-primaryBg hover:text-primary hover:bg-primaryBg hover:border-transparent mx-5 text-base" href="/#">
+                <Link to="services/kapping">Kapping</Link>
+              </a> 
+              <a className="hidden lg:flex btn text-detail4 bg-primaryBg border-primaryBg hover:text-primary hover:bg-primaryBg hover:border-transparent mx-5 text-base" href="/#">
+                <Link to="services/esculpido">Esculpidas</Link>
+              </a> 
               <a className="btn bg-primary border-transparent text-primaryBg hover:bg-primary hover:border-transparent hover:shadow-inner rounded-btn mx-5 text-base" href="/#">
                       Agendate!
-                    </a>
-              <CartWidget/>
+              </a>
+              <Link to="cart"><CartWidget/></Link>
             </div>
           </div> 
         </div>

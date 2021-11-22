@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
+import { ItemDetail } from './ItemDetail'
 
-export const Item = ( { name, desc, price, img, stock, initial } ) => {
+export const Item = ( { id, name, desc, price, img, stock, initial } ) => {
 
     let [count, setCount] = useState(initial)
 
@@ -24,7 +26,7 @@ export const Item = ( { name, desc, price, img, stock, initial } ) => {
                 <div>
                     {stock === 0 ?
                         <p className={stock === 0 ? "text-center text-gray-400" : "hidden"}>Stock insuficiente</p> :
-                        <button className='btn btn-sm'>Agregar al carrito</button>
+                        <Link to={`detail/${id}`} className='btn btn-sm'>Detalles</Link>
                     }
                 </div>
             </div>

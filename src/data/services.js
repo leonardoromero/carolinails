@@ -10,7 +10,8 @@ export const services = [
         price: 800,
         stock: 5,
         initial: 1,
-        img: semi
+        img: semi,
+        category: "esmaltado"
     },
 {
         id: 2,
@@ -19,7 +20,8 @@ export const services = [
         price: 900,
         stock: 5,
         initial: 1,
-        img: kapping
+        img: kapping,
+        category: "kapping"
     },
 {
         id: 3,
@@ -28,6 +30,7 @@ export const services = [
         price: 1400,
         stock: 5,
         initial: 1,
-        img: esculpidoCSemi
+        img: esculpidoCSemi,
+        category: "esculpido"
     }
 ];
