@@ -26,7 +26,7 @@ export const Item = ( { id, name, desc, price, img, stock, initial } ) => {
                 <div>
                     {stock === 0 ?
                         <p className={stock === 0 ? "text-center text-gray-400" : "hidden"}>Stock insuficiente</p> :
-                        <Link to={`detail/${id}`} className='btn btn-sm'>Detalles</Link>
+                        <Link to={`/services/detail/${id}`} className='btn btn-sm'>Detalles</Link>
                     }
                 </div>
             </div>
