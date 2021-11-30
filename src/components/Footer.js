@@ -4,7 +4,7 @@ import React from 'react'
 export const Footer = () => {
     return (
         <>
-            <footer class="p-10 footer bg-primary text-base-content footer-center">
+            <footer class="p-10 footer bg-primary text-base-content footer-center" >
                 <div class="grid grid-flow-col gap-4">
                     <a class="link link-hover">Home</a> 
                     <a class="link link-hover">Galería</a> 
