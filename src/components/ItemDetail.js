@@ -1,23 +1,17 @@
-import React, {useState} from 'react'
-import {ItemCount} from './ItemCount'
+import React, {useState, useContext} from 'react'
+import { CartContext } from '../context/CartContext'
 import {AddToCart} from './AddToCart'
 import {AddedToCart} from './AddedToCart'
 
 export const ItemDetail = ( { id, name, desc, price, img, stock, initial, category } ) => {
 
     let [count, setCount] = useState(initial)
-    let [added, setAdded] = useState(false)
+    const {addToCart, isInCart} = useContext(CartContext)
 
     const handleAdd = () => {
         
         if(count > 0){
-            console.log('Item agregado:', {
-                id,
-                name,
-                price,
-                count
-            })
-            setAdded(true)
+            addToCart({id, name, price, count})
         }
 
     }
@@ -31,7 +25,7 @@ export const ItemDetail = ( { id, name, desc, price, img, stock, initial, catego
                     <p>{desc}</p> 
                     <p>${price}</p>
                 </div>
-                {!added
+                {!isInCart(id)
                 ? <AddToCart 
                     stock={stock} 
                     initial={initial} 

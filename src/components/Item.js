@@ -1,27 +1,20 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom'
-import { ItemDetail } from './ItemDetail'
-import {ItemCount} from './ItemCount'
 import { AddToCart } from './AddToCart'
 import { AddedToCart } from './AddedToCart'
 
 export const Item = ( { id, name, price, img, stock, initial } ) => {
 
     let [count, setCount] = useState(initial)
-    let [added, setAdded] = useState(false)
+    const {addToCart, isInCart} = useContext(CartContext)
 
     const handleAdd = () => {
         
         if(count > 0){
-            console.log('Item agregado:', {
-                id,
-                name,
-                price,
-                count
-            })
-            setAdded(true)}
-            
+            addToCart({id, name, price, count})
         }
+    }
     
 
     return (
@@ -32,7 +25,7 @@ export const Item = ( { id, name, price, img, stock, initial } ) => {
                 <h2 className="card-title md:h-20">{name}</h2> 
                 <p>${price}</p> 
 
-                {!added
+                {!isInCart(id)
                 ? <AddToCart 
                     stock={stock} 
                     initial={initial} 
