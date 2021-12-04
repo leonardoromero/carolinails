@@ -23,7 +23,7 @@ export const ItemDetailContainer = () => {
         .finally(() => {
             setLoading(false)
         })
-    }, [])
+    }, [serviceId])
     
 
     return (

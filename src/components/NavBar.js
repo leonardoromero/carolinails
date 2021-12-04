@@ -12,7 +12,7 @@ export const NavBar = () => {
               <path strokeLinecap="round" strokeLineJoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>               
             </svg>
           </button>
-            <a href="#"><Link to="/"><img src={Logo} alt="logo" className='h-20'/></Link></a>
+            <Link to="/"><img src={Logo} alt="logo" className='h-20'/></Link>
           </div> 
           <div className="px-2 mx-2 navbar-end lg:flex">
             <div className="flex items-stretch">

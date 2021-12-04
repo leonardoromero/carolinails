@@ -5,7 +5,7 @@ import waves3 from '../img/waves-3.svg'
 export const Hero = ( ) => {
     return (
         <>
-            <div className="hero py-44 bg-primaryBg" style={{ backgroundImage:`url(${waves3})` }}>
+            <div className="hero py-40 lg:py-64 bg-primaryBg" style={{ backgroundImage:`url(${waves3})` }}>
                 <div className="flex-col hero-content lg:flex-row-reverse -mt-20">
                     <img src={Landing} className="max-w-xs lg:max-w-sm rounded-lg shadow-2xl mb-5" alt='recién casada mostrando sus uñas'/> 
                     <div className='md:mr-20'>

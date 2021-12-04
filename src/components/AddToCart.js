@@ -10,7 +10,11 @@ export const AddToCart = ( {stock, initial, count, setCount, handleAdd}) => {
                 count={count} 
                 setCount={setCount} 
             />
-            <button className='btn btn-sm mb-3 w-full' onClick={handleAdd}>Agregar al carrito</button>
+            <button 
+                className='btn btn-sm mb-3 w-60' 
+                onClick={handleAdd}
+                disabled={count === 0}
+            >Agregar al carrito</button>
         </div>
     )
 }

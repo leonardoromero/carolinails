@@ -6,6 +6,6 @@ export const getData = () => {
 
         setTimeout(() => {
             resolve(services)
-        }, 2000)
+        }, 500)
     })
 }
