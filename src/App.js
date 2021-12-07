@@ -8,6 +8,7 @@ import { NavBar } from './components/NavBar'
 import { Cart } from './components/Cart'
 import { CartContext } from './context/CartContext';
 import { useState } from 'react';
+import { Checkout } from './components/Checkout';
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
           <Route path="/services/:category" element={<ItemListContainer/>}/>
           <Route path="/services/detail/:serviceId" element={<ItemDetailContainer/>}/>
           <Route path="/cart" element={<Cart/>}/>
+          <Route path="/checkout" element={<Checkout/>}/>
         </Routes>
 
         <Footer/>

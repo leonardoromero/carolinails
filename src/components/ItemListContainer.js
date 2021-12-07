@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import { ItemList } from './ItemList'
-import { getData } from '../helpers/getData.js'
 import { Loading } from './Loading'
 import { useParams } from 'react-router'
+import { collection, getDocs, query, where } from 'firebase/firestore/lite'
+import { db } from '../firebase/config'
 
 
 export const ItemListContainer = () => {
@@ -14,21 +15,21 @@ export const ItemListContainer = () => {
     useEffect(() => {
         setLoading(true)
 
-        getData()
-        .then((response) => {
-            if(!category){
-                setServices(response)   
-            } else {
-                setServices(response.filter ( service => service.category === category))
-            }
-            
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-        .finally(() => {
-            setLoading(false)
-        })
+        const servicesRef = collection(db, 'services')
+        const q = category ? query(servicesRef, where('category', '==', category)) : servicesRef
+
+        getDocs(q)
+            .then((res) => {
+                const items = res.docs.map((doc) => ({
+                    id: doc.id,
+                    ...doc.data()
+                }))
+                setServices(items)
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+        
     }, [category])
     
 

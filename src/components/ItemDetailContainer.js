@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import { getData } from '../helpers/getData.js'
 import { Loading } from './Loading'
 import { useParams } from 'react-router'
 import { ItemDetail } from './ItemDetail'
+import { doc, getDoc } from 'firebase/firestore/lite'
+import { db } from '../firebase/config'
 
 export const ItemDetailContainer = () => {
 
@@ -13,16 +14,20 @@ export const ItemDetailContainer = () => {
     useEffect(() => {
         setLoading(true)
 
-        getData()
-        .then((response) => {
-            setService(response.find( service => service.id === Number(serviceId)))
-        })
-        .catch((error) => {
-            console.log(error)
-        })
-        .finally(() => {
-            setLoading(false)
-        })
+        const docRef = doc(db, 'services', serviceId)
+
+        getDoc(docRef)
+            .then((doc) => {
+                console.log(doc)
+                setService({
+                    id: doc.id,
+                    ...doc.data()
+                })
+            })
+            .finally(() => {
+                setLoading(false)
+            })
+
     }, [serviceId])
     
 

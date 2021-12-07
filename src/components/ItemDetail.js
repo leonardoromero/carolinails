@@ -4,9 +4,9 @@ import {AddToCart} from './AddToCart'
 import {AddedToCart} from './AddedToCart'
 import { useNavigate } from 'react-router'
 
-export const ItemDetail = ( { id, name, desc, price, img, stock, initial, category } ) => {
+export const ItemDetail = ( { id, name, desc, price, img, stock, category } ) => {
 
-    let [count, setCount] = useState(initial)
+    let [count, setCount] = useState(0)
     const {addToCart, isInCart} = useContext(CartContext)
     const navigate = useNavigate()
 
@@ -34,7 +34,7 @@ export const ItemDetail = ( { id, name, desc, price, img, stock, initial, catego
                     {!isInCart(id)
                         ? <AddToCart
                             stock={stock} 
-                            initial={initial} 
+                            initial={0} 
                             count={count} 
                             setCount={setCount} 
                             handleAdd={handleAdd}/>

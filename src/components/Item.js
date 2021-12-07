@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom'
 import { AddToCart } from './AddToCart'
 import { AddedToCart } from './AddedToCart'
 
-export const Item = ( { id, name, price, img, stock, initial } ) => {
+export const Item = ( { id, name, price, img, stock } ) => {
 
-    let [count, setCount] = useState(initial)
+    let [count, setCount] = useState(0)
     const {addToCart, isInCart} = useContext(CartContext)
 
     const handleAdd = () => {
@@ -19,7 +19,7 @@ export const Item = ( { id, name, price, img, stock, initial } ) => {
     return (
         <>
             <div className="card text-center shadow-2xl md:max-w-xs m-8 bg-base-200">
-                <img src={img} className="rounded-xl rounded-b-none object-cover h-64 w-full" alt="img"/>
+                <img src={img} className="rounded-xl rounded-b-none object-cover h-full w-full" alt="img"/>
                 <div className="card-body">
                     <h2 className="card-title md:h-20">{name}</h2> 
                     <p>${price}</p> 
@@ -27,7 +27,7 @@ export const Item = ( { id, name, price, img, stock, initial } ) => {
                     {!isInCart(id)
                     ? <AddToCart 
                         stock={stock} 
-                        initial={initial} 
+                        initial={0} 
                         count={count} 
                         setCount={setCount} 
                         handleAdd={handleAdd}/>

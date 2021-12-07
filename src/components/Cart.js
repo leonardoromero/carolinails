@@ -24,7 +24,7 @@ export const Cart = () => {
                 <hr/>
                 <div className="buttons flex justify-center mt-3">
                     <button className='btn btn-error' onClick={deleteCart}>Vaciar Carrito</button>
-                    <button className='btn btn-success mx-3'>Finalizar compra</button>
+                    <Link to="/checkout" className='btn btn-success mx-3'>Finalizar compra</Link>
                     <h2 className="ml-auto font-bold text-3xl">Total: ${totalCart()}</h2>  
                 </div>
                 
