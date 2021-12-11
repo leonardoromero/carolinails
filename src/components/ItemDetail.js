@@ -4,7 +4,7 @@ import {AddToCart} from './AddToCart'
 import {AddedToCart} from './AddedToCart'
 import { useNavigate } from 'react-router'
 
-export const ItemDetail = ( { id, name, desc, price, img, stock, category } ) => {
+export const ItemDetail = ( { id, name, desc, price, img, stock } ) => {
 
     let [count, setCount] = useState(0)
     const {addToCart, isInCart} = useContext(CartContext)

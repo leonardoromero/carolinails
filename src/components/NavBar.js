@@ -9,7 +9,7 @@ export const NavBar = () => {
           <div className="px-2 mx-2 navbar-start">
             <button className="btn btn-square text-primary bg-primaryBg border-primaryBg hover:text-primaryBg hover:bg-primary hover: border-none lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current">           
-              <path strokeLinecap="round" strokeLineJoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>               
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>               
             </svg>
           </button>
             <Link to="/"><img src={Logo} alt="logo" className='h-20'/></Link>
