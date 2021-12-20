@@ -1,11 +1,9 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const AddedToCart = () => {
     return (
         
         <div className='addedToCart'>
-            
             <div className='mt-8 mb-6'>
                 <p className="text-success font-bold">¡Añadido al carrito!</p>
             </div>

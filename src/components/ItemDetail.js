@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import {useState, useContext} from 'react'
 import { CartContext } from '../context/CartContext'
 import {AddToCart} from './AddToCart'
 import {AddedToCart} from './AddedToCart'
@@ -25,11 +25,11 @@ export const ItemDetail = ( { id, name, desc, price, img, stock } ) => {
         <>
             <div className="flex justify-center bg-primaryFocus">
                 <div className="card text-center shadow-2xl md:max-w-md m-8 bg-base-200">
-                    <img src={img} className="rounded-xl rounded-b-none object-cover h-100 w-full" alt="img"/>
-                    <div className="card-body">
-                        <h2 className="card-title md:h-14">{name}</h2> 
+                    <img src={img} className="rounded-xl rounded-b-none object-cover h-100 w-full" alt={name}/>
+                    <div className="card-body p-8">
+                        <h2 className="card-title md:h-12">{name}</h2> 
                         <p>{desc}</p> 
-                        <p>${price}</p>
+                        <p className="pt-3 text-lg font-bold">${price}</p>
                     </div>
                     {!isInCart(id)
                         ? <AddToCart
@@ -39,7 +39,11 @@ export const ItemDetail = ( { id, name, desc, price, img, stock } ) => {
                             setCount={setCount} 
                             handleAdd={handleAdd}/>
                         : <AddedToCart/>}
-                    <button className='btn btn-outline btn-sm w-40 m-auto mb-4' onClick={handlePreviousPage}>Volver</button>
+                    <button 
+                        className="btn btn-outline btn-sm w-40 m-auto mb-4" 
+                        onClick={handlePreviousPage}>
+                        Volver
+                    </button>
                 </div> 
             </div>
         </>
