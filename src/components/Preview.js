@@ -8,8 +8,8 @@ export const Preview = () => {
     return (
         <section className="container rounded-2xl w-11/12 mx-auto mb-10">
                 <div className="flex flex-wrap justify-center">
-                    <Link to="/services/basico" className="m-3">
-                        <div className="card text-center shadow-2xl w-1/3 md:w-56 bg-primaryBg">
+                    <Link to="/services/basico" className="m-2 w-1/2 lg:w-56">
+                        <div className="card shadow-2xl bg-primaryBg">
                             <figure>
                                 <img src={basico} alt="previsualización servicio básico"/>
                             </figure> 
@@ -18,8 +18,8 @@ export const Preview = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to="/services/kapping" className="m-3">
-                        <div className="card text-center shadow-2xl w-1/3 md:w-56 bg-primaryBg">
+                    <Link to="/services/kapping" className="m-2 w-1/2 lg:w-56">
+                        <div className="card text-center shadow-2xl bg-primaryBg">
                             <figure>
                                 <img src={kapping} alt="previsualización servicio kapping"/>
                             </figure> 
@@ -28,8 +28,8 @@ export const Preview = () => {
                             </div>
                         </div> 
                     </Link>
-                    <Link to="/services/esculpidas" className="m-3">
-                        <div className="card text-center shadow-2xl w-1/3 md:w-56 bg-primaryBg">
+                    <Link to="/services/esculpidas" className="m-2 w-1/2 lg:w-56">
+                        <div className="card text-center shadow-2xl bg-primaryBg">
                             <figure>
                                 <img src={esculpidas} alt="previsualización servicio exculpidas"/>
                             </figure> 
@@ -38,8 +38,8 @@ export const Preview = () => {
                             </div>
                         </div> 
                     </Link>
-                    <Link to="/services/service" className="m-3">
-                        <div className="card text-center shadow-2xl w-1/3 md:w-56 bg-primaryBg">
+                    <Link to="/services/service" className="m-2 w-1/2 lg:w-56">
+                        <div className="card text-center shadow-2xl bg-primaryBg">
                             <figure>
                                 <img src={service} alt="previsualización servicio service"/>
                             </figure> 

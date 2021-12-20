@@ -13,7 +13,7 @@ export const Footer = () => {
                     <Link to="/services/kapping" className="text-base hover:text-white hover:text-bold">Kapping</Link> 
                     <Link to="/services/esculpidas" className="text-base hover:text-white hover:text-bold">Esculpidas</Link> 
                     <Link to="/services/service" className="text-base hover:text-white hover:text-bold">Service</Link> 
-                    <Link to="/" className="text-base hover:text-white hover:text-bold">Agendate!</Link> 
+                    <Link to="/scheduling" className="text-base hover:text-white hover:text-bold">Agendate!</Link> 
                 </div> 
                 <div>
                     <div className="grid grid-flow-col gap-4">

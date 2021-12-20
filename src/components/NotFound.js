@@ -9,17 +9,17 @@ export const NotFound = ( { product = false } ) => {
     }
 
     return (
-        <div class="hero min-h-screen bg-primaryBg">
-            <div class="text-center hero-content">
-                <div class="max-w-md">
+        <div className="hero min-h-screen bg-primaryBg">
+            <div className="text-center hero-content">
+                <div className="max-w-md">
                     {!product
                         ? <>
-                            <h1 class="mb-5 text-5xl font-bold">Página no encontrada!</h1> 
-                            <p class="mb-5">Parece que la página que estás buscando no existe.</p> 
+                            <h1 className="mb-5 text-5xl font-bold">Página no encontrada!</h1> 
+                            <p className="mb-5">Parece que la página que estás buscando no existe.</p> 
                             </>
                         : <>
-                            <h1 class="mb-5 text-5xl font-bold">Producto no encontrado!</h1> 
-                            <p class="mb-5">Parece que el producto que estás buscando no existe.</p> 
+                            <h1 className="mb-5 text-5xl font-bold">Producto no encontrado!</h1> 
+                            <p className="mb-5">Parece que el producto que estás buscando no existe.</p> 
                             </>
                     }
                     <div className="buttons flex justify-center">

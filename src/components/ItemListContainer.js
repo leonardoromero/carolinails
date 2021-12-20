@@ -45,7 +45,7 @@ export const ItemListContainer = () => {
     
 
     return (
-        <div className="flex justify-center bg-primaryFocus min-h-screen max-h-full p-5">
+        <div className="flex justify-center bg-primaryFocus p-5">
             {loading 
                 ? <Loading/> 
                 : categoryExists 

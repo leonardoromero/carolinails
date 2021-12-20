@@ -22,6 +22,7 @@ export const Cart = () => {
                 <section>
                     { cart.map((prod) => { return (
                         <CartCard 
+                            key={prod.id}
                             {...prod} 
                             removeFromCart={removeFromCart} 
                             totalCart={totalCart} 
